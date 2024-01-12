@@ -5,6 +5,10 @@
 #ifndef UEL_EVENT_H
 #define	UEL_EVENT_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /// \cond
 #include <stdint.h>
 #include <stdbool.h>
@@ -197,5 +201,9 @@ void uel_event_timer_resume(uel_event_t *event);
   * \param event The timer event to be cancelled
   */
 void uel_event_timer_cancel(uel_event_t *event);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif	/* UEL_EVENT_H */

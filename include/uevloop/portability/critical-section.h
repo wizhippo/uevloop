@@ -24,6 +24,9 @@
 #endif /* UEL_CRITICAL_EXIT */
 
 #ifdef UEL_CRITICAL_SECTION_OBJ_TYPE
+#ifdef __cplusplus
+extern "C" {
+#endif
 /** \brief The global critical section object.
 *
 * Should the programmer need a critical section object to manage the system lock,
@@ -36,6 +39,9 @@
 * then be available in all critical sections.
 */
 extern UEL_CRITICAL_SECTION_OBJ_TYPE uel_critical_section;
+#ifdef __cplusplus
+}
+#endif
 #endif /* UEL_CRITICAL_SECTION_OBJ_TYPE */
 
 #endif /* end of include guard: CRITICAL_SECTION_H */

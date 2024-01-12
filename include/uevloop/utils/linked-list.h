@@ -6,6 +6,10 @@
 #ifndef UEL_LINKED_LIST_H
 #define	UEL_LINKED_LIST_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /// \cond
 #include <stdint.h>
 #include <stdbool.h>
@@ -121,5 +125,9 @@ uel_llist_t uel_llist_remove_while(uel_llist_t *list, uel_closure_t *should_remo
   * closure parameters to a `uel_llist_node_t **[2]` and return a boolean.
   */
 void uel_llist_insert_at(uel_llist_t *list, uel_llist_node_t *node, uel_closure_t *should_insert);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif	/* UEL_LINKED_LIST_H */

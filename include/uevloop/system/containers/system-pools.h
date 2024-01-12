@@ -5,6 +5,10 @@
 #ifndef UEL_SYSTEM_POOLS_H
 #define	UEL_SYSTEM_POOLS_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /// \cond
 #include <stdint.h>
 /// \endcond
@@ -76,5 +80,9 @@ bool uel_syspools_release_event(uel_syspools_t *pools, uel_event_t *event);
   * \returns Wheter the linked list node was successfully released
   */
 bool uel_syspools_release_llist_node(uel_syspools_t *pools, uel_llist_node_t *node);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif	/* UEL_SYSTEM_POOLS_H */

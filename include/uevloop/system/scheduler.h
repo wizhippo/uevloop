@@ -6,6 +6,10 @@
 #ifndef UEL_SCHEDULER_H
 #define	UEL_SCHEDULER_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /// \cond
 #include <stdint.h>
 /// \endcond
@@ -111,5 +115,9 @@ void uel_sch_manage_timers(uel_scheduer_t *scheduler);
   * \param timer The new counter value to be acknowledged.
   */
 void uel_sch_update_timer(uel_scheduer_t *scheduler, uint32_t timer);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif	/* UEL_SCHEDULER_H */

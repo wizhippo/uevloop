@@ -5,6 +5,10 @@
 #ifndef UEL_EVENT_LOOP_H
 #define UEL_EVENT_LOOP_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "uevloop/utils/closure.h"
 #include "uevloop/utils/linked-list.h"
 #include "uevloop/system/containers/system-pools.h"
@@ -88,5 +92,9 @@ uel_event_t *uel_evloop_observe_once(
     volatile uintptr_t *condition_var,
     uel_closure_t *closure
 );
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* end of include guard: UEL_EVENT_LOOP_H */

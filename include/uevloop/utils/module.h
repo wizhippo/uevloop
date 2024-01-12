@@ -4,6 +4,10 @@
 #ifndef UEL_MODULE_H
 #define UEL_MODULE_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 struct uel_application;
 struct uel_module;
 
@@ -64,5 +68,9 @@ void uel_module_config(uel_module_t *module);
   * \param module The modules to launch
   */
 void uel_module_launch(uel_module_t *module);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* end of include guard: UEL_MODULE_H */

@@ -7,6 +7,10 @@
 #ifndef UEL_CONDITIONAL_H
 #define UEL_CONDITIONAL_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "uevloop/utils/closure.h"
 
 /** \brief Conditionals are constructs that provide functional flow control.
@@ -48,5 +52,9 @@ void uel_conditional_init(uel_conditional_t *conditional, uel_closure_t test,
   * \returns Whatever the invoked closure returned
   */
 void *uel_conditional_apply(uel_conditional_t *conditional, void *params);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* end of include guard: UEL_CONDITIONAL_H */

@@ -6,6 +6,10 @@
 #ifndef UEL_FUNCTIONAL_H
 #define UEL_FUNCTIONAL_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /// \cond
 #include <stdlib.h>
 /// \endcond
@@ -158,5 +162,9 @@ uel_closure_t uel_func_none(uel_closure_t *closure);
   * \returns Whether any elements pass the supplied test closure.
   */
 uel_closure_t uel_func_any(uel_closure_t *closure);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* end of include guard: UEL_FUNCTIONAL_H */

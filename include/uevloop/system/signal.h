@@ -6,6 +6,10 @@
 #ifndef UEL_SIGNAL_H
 #define UEL_SIGNAL_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "uevloop/utils/linked-list.h"
 #include "uevloop/utils/closure.h"
 #include "uevloop/utils/promise.h"
@@ -141,5 +145,9 @@ uel_signal_listener_t uel_signal_reject_promise(
     uel_signal_relay_t *relay,
     uel_promise_t *promise
 );
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* end of include guard: UEL_SIGNAL_H */

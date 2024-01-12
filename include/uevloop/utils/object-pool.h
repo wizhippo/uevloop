@@ -6,6 +6,10 @@
 #ifndef UEL_OBJECT_POOL_H
 #define	UEL_OBJECT_POOL_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "uevloop/utils/circular-queue.h"
 
 /// \cond
@@ -121,5 +125,9 @@ bool uel_objpool_is_empty(uel_objpool_t *pool);
   */
 #define UEL_OBJPOOL_BUFFERS_AT(id, obj)                             \
     (uint8_t *)&obj->id##_pool_buffer, obj->id##_pool_queue_buffer
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif	/* UEL_OBJECT_POOL_H */

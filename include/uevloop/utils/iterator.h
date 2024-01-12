@@ -7,6 +7,10 @@
 #ifndef UEL_ITERATOR_H
 #define UEL_ITERATOR_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /// \cond
 #include <stdlib.h>
 #include <limits.h>
@@ -176,5 +180,9 @@ uel_iterator_llist_t uel_iterator_llist_create(uel_llist_t *list);
 //! Defines the maximum possible iteration limit for the `uel_iterator_map()`
 //! function.
 #define UEL_ITERATOR_MAP_BOUNDLESS UINT_MAX
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* UEL_ITERATOR_H */

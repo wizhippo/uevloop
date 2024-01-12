@@ -6,6 +6,10 @@
 #ifndef UEL_CIRCULAR_QUEUE_H
 #define	UEL_CIRCULAR_QUEUE_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /// \cond
 #include <stdint.h>
 #include <stdbool.h>
@@ -102,5 +106,9 @@ bool uel_cqueue_is_empty(uel_cqueue_t *queue);
   * \returns The number of enqueued elements
   */
 uintptr_t uel_cqueue_count(uel_cqueue_t *queue);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif	/* UEL_CIRCULAR_QUEUE_H */

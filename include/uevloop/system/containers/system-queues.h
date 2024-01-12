@@ -5,6 +5,10 @@
 #ifndef UEL_SYSTEM_QUEUES_H
 #define UEL_SYSTEM_QUEUES_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /// \cond
 #include <stdint.h>
 /// \endcond
@@ -102,5 +106,9 @@ uel_event_t *uel_sysqueues_get_scheduled_event(uel_sysqueues_t *queues);
   * \returns The number of elements in the queue
   */
 uintptr_t uel_sysqueues_count_scheduled_events(uel_sysqueues_t *queues);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* end of include guard: UEL_SYSTEM_QUEUES_H */

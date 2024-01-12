@@ -5,6 +5,11 @@
 
 #ifndef UEL_APPLICATION_H
 #define UEL_APPLICATION_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /// \cond
 #include <stdint.h>
 #include <stdbool.h>
@@ -158,5 +163,9 @@ uel_event_t *uel_app_observe(
     volatile uintptr_t *condition_var,
     uel_closure_t *closure
 );
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* end of include guard: UEL_APPLICATION_H */

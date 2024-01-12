@@ -7,6 +7,10 @@
 #ifndef UEL_PIPELINE_H
 #define UEL_PIPELINE_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /// \cond
 #include <stdlib.h>
 /// \endcond
@@ -61,5 +65,9 @@ void *uel_pipeline_apply(uel_pipeline_t *pipeline, void *params);
     uel_pipeline_t id##_pipeline;                                             \
     uel_pipeline_init(&id##_pipeline, id##_pipeline_closures,                 \
                     sizeof(id##_pipeline_closures) / sizeof(uel_closure_t));
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* end of include guard: UEL_PIPELINE_H */

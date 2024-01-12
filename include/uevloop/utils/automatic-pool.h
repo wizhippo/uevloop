@@ -8,6 +8,10 @@
 #ifndef UEL_AUTOMATIC_POOL_H
 #define UEL_AUTOMATIC_POOL_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "uevloop/utils/object-pool.h"
 #include "uevloop/utils/closure.h"
 
@@ -173,5 +177,9 @@ void uel_autopool_set_destructor(uel_autopool_t *pool, uel_closure_t destructor)
 #define UEL_AUTOPOOL_BUFFERS_AT(id, obj)                            \
     (uint8_t *)&obj->id##_buffer, obj->id##_pool_buffer,            \
     obj->id##_pool_queue_buffer
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* end of include guard: UEL_AUTOMATIC_POOL_H */

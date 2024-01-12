@@ -7,6 +7,10 @@
 #ifndef UEL_CLOSURE_H
 #define	UEL_CLOSURE_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /** \brief Defines a closure function, suitable for being bound at a closure.
   *
   * Must take two pointers ar arguments, one for the context and one for
@@ -59,5 +63,9 @@ void *uel_closure_invoke(uel_closure_t *closure, void *params);
   * closures as callbacks when the caller does not need to callback.
   */
 uel_closure_t uel_nop();
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif	/* UEL_CLOSURE_H */

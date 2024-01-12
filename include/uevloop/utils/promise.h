@@ -10,6 +10,10 @@
 #ifndef UEL_PROMISE_H
 #define UEL_PROMISE_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "uevloop/config.h"
 #include "uevloop/utils/closure.h"
 #include "uevloop/utils/object-pool.h"
@@ -232,5 +236,9 @@ uel_closure_t uel_promise_destroyer(uel_promise_t *promise);
 
 
 #endif /* UEL_PROMISE_SHORTCUTS */
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* end of include guard: UEL_PROMISE_H */
